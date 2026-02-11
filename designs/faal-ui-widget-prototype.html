@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faal UI Widget Prototype</title>
+    <link rel="stylesheet" href="./faal-ui-widget-prototype.css" />
+  </head>
+  <body>
+    <main class="screen">
+      <section class="widget" aria-label="Paran çalışsaydı ne kazanırdın hesaplama aracı">
+        <header class="widget__header">
+          <h1>Paran Çalışsaydı Ne Kazanırdı?</h1>
+          <p>
+            Maaş gününü ve ödeme günlerini seç. Bu iki tarih arasında paran Faal'de
+            çalışsaydı ne kadar kazanacağını hemen gör.
+          </p>
+        </header>
+
+        <button class="salary-button" type="button">Maaş Günü Seçin</button>
+
+        <div class="expenses" aria-label="Masraf listesi">
+          <article class="expense-row">
+            <label>
+              <span>Kredi Kartı Ödemesi</span>
+              <input type="text" value="Kredi Kartı Ödemesi" />
+            </label>
+            <label>
+              <span>Tutar</span>
+              <input type="number" value="50000" />
+            </label>
+            <label>
+              <span>Gün</span>
+              <input type="number" value="11" min="1" max="31" />
+            </label>
+          </article>
+
+          <article class="expense-row">
+            <label>
+              <span>Ev Kirası</span>
+              <input type="text" value="Ev Kirası" />
+            </label>
+            <label>
+              <span>Tutar</span>
+              <input type="number" value="50000" />
+            </label>
+            <label>
+              <span>Gün</span>
+              <input type="number" value="11" min="1" max="31" />
+            </label>
+          </article>
+
+          <article class="expense-row">
+            <label>
+              <span>Kredi Ödemesi</span>
+              <input type="text" value="Kredi Ödemesi" />
+            </label>
+            <label>
+              <span>Tutar</span>
+              <input type="number" value="50000" />
+            </label>
+            <label>
+              <span>Gün</span>
+              <input type="number" value="11" min="1" max="31" />
+            </label>
+          </article>
+
+          <button class="add-expense" type="button">Yeni Masraf Ekle</button>
+        </div>
+
+        <button class="calculate" type="button">Hesapla</button>
+      </section>
+    </main>
+  </body>
+</html>
