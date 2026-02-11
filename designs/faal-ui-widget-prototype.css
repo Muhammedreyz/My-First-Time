@@ -1,0 +1,137 @@
+:root {
+  --bg: #101321;
+  --card: #f4f4f5;
+  --surface: #ffffff;
+  --text: #121528;
+  --muted: #59627a;
+  --primary: #101322;
+  --accent: #9fe071;
+  --border: #d5d9e3;
+  --focus: #6ca6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Inter, Avenir, Segoe UI, sans-serif;
+  background: radial-gradient(circle at 90% 10%, #21273f 0, #12172d 35%, #090b17 100%);
+  color: var(--text);
+}
+
+.screen {
+  width: min(460px, 100%);
+  padding: 18px;
+}
+
+.widget {
+  border-radius: 30px;
+  background: var(--card);
+  border: 1px solid #73798c;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+}
+
+.widget__header {
+  text-align: center;
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 16px 14px;
+}
+
+.widget__header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.widget__header p {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.salary-button,
+.calculate {
+  border: 0;
+  border-radius: 15px;
+  padding: 16px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.salary-button {
+  background: var(--primary);
+  color: #fff;
+}
+
+.expenses {
+  display: grid;
+  gap: 12px;
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 12px;
+}
+
+.expense-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.8fr;
+  gap: 8px;
+}
+
+.expense-row label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.expense-row input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f9fafc;
+  font-size: 0.98rem;
+  color: var(--text);
+  padding: 10px;
+}
+
+.expense-row input:focus {
+  border-color: var(--focus);
+  outline: 2px solid rgba(108, 166, 255, 0.22);
+}
+
+.add-expense {
+  margin-top: 2px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 11px;
+  background: #f9fafc;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.calculate {
+  background: var(--accent);
+  color: #fff;
+}
+
+@media (max-width: 430px) {
+  .expense-row {
+    grid-template-columns: 1fr;
+  }
+
+  .widget__header h1 {
+    font-size: 1.2rem;
+  }
+}
